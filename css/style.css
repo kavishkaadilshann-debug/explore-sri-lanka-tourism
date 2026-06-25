@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== HEADER (PROFESSIONAL STICKY NAVBAR) ===== */
+header { 
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ffdd57;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO SECTION (UPGRADED) ===== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('../images/hero.jpeg') center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 50px 20px;
+}
+
+/* ===== CARDS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.4s;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: #e0f7ff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===== HERO SUBTITLE ===== */
+.hero-subtitle {
+  margin-top: 25px;
+  font-size: 1.5rem;
+  color: #cbd5e1;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ===== BUTTON CONTAINER ===== */
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ================= BUTTON LINKS ================= */
+.hero-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #1d4ed8, #00d4ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,212,255,0.3);
+}
+
+/* ===== HIGHLIGHT (Sigiriya link feature) ===== */
+.card:target {
+  border: 3px solid #00b4d8;
+  background: #e0f7ff;
+  transform: scale(1.05);
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.07);
+}
+
+/* ===== TRAVEL TIPS ===== */
+.tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ===== FORM ===== */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #00b4d8;
+}
+
+/* BUTTON */
+form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.03);
+}
+
+.page-banner {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(11,31,58,0.7), rgba(11,31,58,0.7)),
+                url('../images/heroo.jpeg') center/cover;
+    color: white;
+}
+
+.page-banner h2 {
+    font-size: 3rem;
+}
+
+/* ===== ABOUT ===== */
+
+.about-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.about-section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.about-section h2 {
+    color: #0b1f3a;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    padding-left: 20px;
+}
+
+.about-section li {
+    margin-bottom: 8px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #023e8a;
+  color: white;
+  margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+}
