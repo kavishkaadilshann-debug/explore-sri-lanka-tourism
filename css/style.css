@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,14 @@ body {
   color: #222;
   line-height: 1.6;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 /* ===== HEADER (PROFESSIONAL STICKY NAVBAR) ===== */
 header { 
   background: linear-gradient(135deg, #0077b6, #00b4d8);
@@ -28,6 +36,11 @@ header h1 {
 /* ===== NAVIGATION ===== */
 nav {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 }
 
 nav a {
@@ -96,6 +109,7 @@ section {
 .card {
   background: white;
   padding: 20px;
+  min-height:250px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   transition: 0.4s;
@@ -285,12 +299,49 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 60px 20px;
+  }
+
   .hero h2 {
     font-size: 2rem;
   }
 
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   nav a {
-    display: inline-block;
-    margin: 8px;
+    margin: 0;
+  }
+
+  .cards,
+  .gallery,
+  .tips {
+    grid-template-columns: 1fr;
+  }
+
+  .page-banner h2 {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 20px;
   }
 }
