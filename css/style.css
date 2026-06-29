@@ -52,9 +52,8 @@ header {
   z-index: 1000;
   box-shadow: var(--shadow-sm);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
 }
 
 header h1 {
@@ -63,35 +62,55 @@ header h1 {
   letter-spacing: -0.5px;
 }
 
+
+.menu-toggle {
+  display: block; 
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+  transition: transform var(--anim-fast);
+}
+
+.menu-toggle:active {
+  transform: scale(0.9);
+}
+
+
+nav {
+  display: none; 
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 78, 146, 0.98);
+  padding: 1rem 0;
+  box-shadow: var(--shadow-md);
+  z-index: 999;
+}
+
+
+nav.show {
+  display: flex !important;
+}
+
 nav a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  margin: 0 1rem;
+  padding: 0.8rem 2rem;
   font-weight: 500;
-  font-size: 0.95rem;
-  position: relative;
-  padding: 0.4rem 0;
-  transition: color var(--anim-fast) var(--curve-smooth);
+  font-size: 1rem;
+  width: 100%;
+  display: block;
+  position: relative; 
 }
 
 nav a:hover, nav a.active {
   color: var(--text-light);
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: var(--brand-secondary);
-  transition: width var(--anim-fast) var(--curve-smooth), left var(--anim-fast) var(--curve-smooth);
-}
-
-nav a:hover::after, nav a.active::after {
-  width: 100%;
-  left: 0;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 
@@ -223,13 +242,11 @@ main, .main-content, .about-container {
   font-size: 0.9rem;
 }
 
-
 .card:target {
   border: 2px solid var(--brand-secondary);
   background: #f0faff;
   animation: pulseHighlight 2s infinite;
 }
-
 
 .gallery {
   display: grid;
@@ -298,7 +315,6 @@ main, .main-content, .about-container {
   border: 1px solid #e2e8f0;
 }
 
-
 form {
   max-width: 550px;
   margin: 0 auto;
@@ -356,37 +372,46 @@ footer {
 
 
 @media (min-width: 768px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1.2rem 4rem;
-  }
-}
-
-@media (max-width: 767px) {
-  nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  nav a {
-    margin: 0;
-    font-size: 0.85rem;
-    padding: 6px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 4px;
-  }
-  nav a::after {
+  .menu-toggle {
     display: none; 
   }
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
+
+  nav {
+    display: flex !important; 
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background: none;
+    padding: 0;
+    box-shadow: none;
   }
-  .hero-btn {
+
+  nav a {
+    width: auto;
+    padding: 0.4rem 0;
+    margin: 0 1rem;
+    display: inline-block;
+    background: none !important; 
+  }
+  
+  nav a:hover, nav a.active {
+    background: none;
+  }
+
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px; 
+    width: 0;
+    height: 2px;
+    background: var(--brand-secondary);
+    transition: width var(--anim-fast) var(--curve-smooth), left var(--anim-fast) var(--curve-smooth);
+  }
+
+  nav a:hover::after, nav a.active::after {
     width: 100%;
+    left: 0;
   }
 }
 
