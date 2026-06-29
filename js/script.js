@@ -66,3 +66,17 @@ function showMessage(element, text, color) {
         element.style.display = "none";
     }, 4000);
 }
+/* Mobile Navigation Menu Toggle
+ */
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    const toggleBtn = document.querySelector('.menu-toggle');    
+    
+    navMenu.classList.toggle('show');    
+    
+    if (navMenu.classList.contains('show')) {
+        toggleBtn.innerHTML = "✕";
+    } else {
+        toggleBtn.innerHTML = "☰";
+    }
+}
