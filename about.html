@@ -2,16 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Sri Lanka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — Explore Sri Lanka</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>About Sri Lanka</h1>
+      <h1>Explore Sri Lanka</h1>
       <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" class="active">About</a>
         <a href="destinations.html">Destinations</a>
         <a href="gallery.html">Gallery</a>
         <a href="travel-tips.html">Travel Tips</a>
@@ -20,87 +25,94 @@
     </header>
 
     <section class="page-banner">
-      <h2>About Sri Lanka</h2>
-      <p>The Pearl of the Indian Ocean</p>
+      <h2>About Us</h2>
+      <p>Who We Are & Our Passion for Travel</p>
     </section>
 
-    <section class="about-container">
-      <div class="about-section">
-        <h2>🇱🇰 Introduction</h2>
-        <p>
-          Sri Lanka is a beautiful island nation located in the Indian Ocean. It
-          is famous for its breathtaking landscapes, rich cultural heritage,
-          ancient cities, and warm hospitality.
-        </p>
+    <main class="about-container">
+      <div class="about-grid">
+        <div class="about-section card">
+          <h2><span class="icon-badge">🌍</span> Our Story</h2>
+          <p>
+            <strong>Explore Sri Lanka</strong> was created to introduce the
+            beauty, culture, and history of Sri Lanka to travelers around the
+            world. We aim to make travel planning easy and enjoyable.
+          </p>
+        </div>
+
+        <div class="about-section card">
+          <h2><span class="icon-badge">🎯</span> Our Mission</h2>
+          <p>
+            Our mission is to provide clear and useful travel information that
+            helps visitors discover the best places in Sri Lanka while promoting
+            responsible and sustainable tourism.
+          </p>
+        </div>
+
+        <div class="about-section card">
+          <h2><span class="icon-badge">🤝</span> What We Do</h2>
+          <p>
+            We share popular destinations, travel tips, beautiful photos, and
+            useful guides to help you enjoy a safe and memorable trip across Sri
+            Lanka.
+          </p>
+        </div>
       </div>
 
-      <div class="about-section">
-        <h2>🌴 Natural Beauty</h2>
-        <p>
-          From golden beaches and lush tea plantations to waterfalls and misty
-          mountains, Sri Lanka offers diverse natural attractions for every
-          traveler.
-        </p>
-      </div>
+      <div class="about-grid-secondary">
+        <div class="about-section facts-card">
+          <h2>📌 Our Values</h2>
+          <ul class="styled-list">
+            <li>
+              <strong>Quality:</strong> We provide simple and accurate travel
+              information.
+            </li>
+            <li>
+              <strong>Respect:</strong> We encourage visitors to protect nature
+              and local culture.
+            </li>
+            <li>
+              <strong>Support:</strong> We help travelers plan their journeys
+              with confidence.
+            </li>
+          </ul>
+        </div>
 
-      <div class="about-section">
-        <h2>🏛️ Cultural Heritage</h2>
-        <p>
-          With over 2,500 years of history, Sri Lanka is home to ancient
-          kingdoms, sacred temples, and UNESCO World Heritage Sites.
-        </p>
+        
+        <div class="about-section visit-card" style="background: var(--bg-card); border: 1px solid rgba(0,0,0,0.05); padding: 2.5rem; box-shadow: var(--shadow-md); border-radius: var(--radius-box);">
+          <h2 style="margin-bottom: 0.5rem;">📩 Stay Updated!</h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">Subscribe to our newsletter to receive the latest hidden gems and travel itineraries direct to your inbox.</p>
+          
+          <div style="text-align: left;">
+            <label for="newsletter-email" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 0.4rem;">Email Address</label>
+            <input 
+              type="email" 
+              id="newsletter-email" 
+              placeholder="example@mail.com" 
+              style="width: 100%; margin: 0 0 1.2rem 0; padding: 0.85rem; border: 1px solid #cbd5e1; border-radius: var(--radius-inner); background-color: #f8fafc;" 
+              required 
+            />
+            
+            
+            <button 
+              type="button" 
+              onclick="subscribeNewsletter()" 
+              style="width: 100%; padding: 1rem; background: var(--brand-gradient); color: var(--text-light); border: none; border-radius: var(--radius-inner); cursor: pointer; font-size: 1rem; font-weight: 600; box-shadow: 0 4px 12px rgba(0, 78, 146, 0.2);"
+            >
+              Join Newsletter
+            </button>
+          </div>
+          
+          
+          <p id="subscribe-msg" style="margin-top: 15px; font-size: 0.9rem; font-weight: 600; text-align: center; display: none;"></p>
+        </div>
+        </div>
+        </div>
       </div>
-
-      <div class="about-section">
-        <h2>🐘 Wildlife & Nature</h2>
-        <p>
-          Sri Lanka is known for its wildlife, including elephants, leopards,
-          whales, and hundreds of bird species found in national parks.
-        </p>
-      </div>
-
-      <div class="about-section">
-        <h2>🍛 Traditional Cuisine</h2>
-        <p>
-          Sri Lankan cuisine is rich in flavor, featuring rice and curry,
-          seafood dishes, tropical fruits, and unique spices.
-        </p>
-      </div>
-
-      <div class="about-section">
-        <h2>🎉 Festivals & Traditions</h2>
-        <p>
-          The country celebrates colorful festivals such as Sinhala and Tamil
-          New Year, Vesak, and the famous Kandy Esala Perahera.
-        </p>
-      </div>
-
-      <div class="about-section">
-        <h2>📌 Quick Facts</h2>
-        <ul>
-          <li>Capital: Sri Jayawardenepura Kotte</li>
-          <li>Commercial Capital: Colombo</li>
-          <li>Population: Over 22 Million</li>
-          <li>Official Languages: Sinhala & Tamil</li>
-          <li>Currency: Sri Lankan Rupee (LKR)</li>
-        </ul>
-      </div>
-
-      <div class="about-section">
-        <h2>✈️ Why Visit Sri Lanka?</h2>
-        <ul>
-          <li>Beautiful Beaches</li>
-          <li>Ancient Historical Sites</li>
-          <li>Scenic Hill Country</li>
-          <li>Wildlife Safaris</li>
-          <li>Delicious Food</li>
-          <li>Friendly People</li>
-        </ul>
-      </div>
-    </section>
+    </main>
 
     <footer>
-      <p>© 2026 Explore Sri Lanka</p>
+      <p>© 2026 Explore Sri Lanka. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
