@@ -160,6 +160,8 @@ nav a:hover, nav a.active {
 
 .hero-btn {
   display: inline-block;
+  min-width: 160px; /* හැම බට්න් එකක්ම එකම අවම පළලකට ගැනීමට */
+  text-align: center; /* අකුරු මැදට කිරීමට */
   padding: 0.8rem 2rem;
   background: var(--brand-gradient);
   color: var(--text-light);
