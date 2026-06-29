@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Tips & Guide</title>
+    <title>Contact Us - Explore Sri Lanka</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -14,7 +14,11 @@
   <body>
     <header>
       <h1>Explore Sri Lanka</h1>
-      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <button
+        class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="Toggle navigation"
+      >
         ☰
       </button>
       <nav id="nav-menu">
@@ -28,46 +32,50 @@
     </header>
 
     <section class="page-banner">
-      <h2>Travel Tips & Guide</h2>
-      <p>Essential information for your journey</p>
+      <h2>Contact Us</h2>
+      <p>Get in touch for any travel inquiries</p>
     </section>
 
     <main class="main-content">
-      <section class="tips">
-        <div class="card">
-          <h3>✈️ Best Time to Visit</h3>
-          <p>
-            December to April is perfect for the west/south beaches and hill
-            country. From May to September, head north and east for optimal
-            sunshine.
-          </p>
-        </div>
+      <form onsubmit="submitForm(event)">
+        <label for="name" style="font-weight: 500; font-size: 0.9rem"
+          >Your Name</label
+        >
+        <input type="text" id="name" placeholder="John Doe" required />
 
-        <div class="card">
-          <h3>🚕 Local Transport</h3>
-          <p>
-            Use local trains for epic scenic routes (like Kandy to Ella) and
-            pick budget-friendly Tuk-Tuks (PickMe/Uber apps work great in
-            cities).
-          </p>
-        </div>
+        <label for="email" style="font-weight: 500; font-size: 0.9rem"
+          >Email Address</label
+        >
+        <input
+          type="email"
+          id="email"
+          placeholder="example@mail.com"
+          required
+        />
 
-        <div class="card">
-          <h3>🍛 Food Guide</h3>
-          <p>
-            Don't miss out on traditional Rice & Spicy Curry, Egg Hoppers, Kottu
-            Roti, and drinking fresh King Coconut (Thambili) daily.
-          </p>
-        </div>
+        <label for="message" style="font-weight: 500; font-size: 0.9rem"
+          >Message</label
+        >
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
 
-        <div class="card">
-          <h3>🛡️ Safety Tips</h3>
-          <p>
-            Stay properly hydrated, dress modestly when entering sacred temples
-            (cover shoulders and knees), and secure your valuables.
-          </p>
-        </div>
-      </section>
+        <button type="submit">Send Message</button>
+
+        <p
+          id="contact-msg"
+          style="
+            margin-top: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            display: none;
+          "
+        ></p>
+      </form>
     </main>
 
     <footer>
